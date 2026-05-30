@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Robostack robot AI training platform website and visual design case study by Duoasa." />
+  <title>Robostack - Duoasa Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" /></noscript>
+  <link rel="stylesheet" href="robostack.css?v=20260529-formal" />
+  <script>
+    (function () {
+      try {
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      } catch (e) {}
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var theme = saved === "light" || saved === "dark" ? saved : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    }());
+  </script>
+</head>
+<body class="quest-page case-robostack">
+  <div id="questPreloader" class="quest-preloader" aria-hidden="true">
+    <div class="quest-pl-panel quest-pl-top"></div>
+    <div class="quest-pl-panel quest-pl-bottom"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-arrow">
+      <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L19 13.3L11.6 15.3L7.8 23L2 2Z" fill="var(--fg)" stroke="var(--bg)" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="cursor-label">
+      <span class="cursor-dot"></span>
+      <span id="cursorLabelText">Guest</span>
+    </div>
+  </div>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Duoasa home">Duoasa</a>
+    <div class="nav-right quest-nav-right">
+      <a href="../index.html#project" class="quest-back-link">Back home</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+        <span id="themeIcon">◐</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="quest-hero">
+      <div
+        class="faulty-terminal-container faulty-terminal-hero"
+        data-faulty-terminal
+        data-scale="2"
+        data-digit-size="1"
+        data-scanline-intensity="0.5"
+        data-glitch-amount="0.4"
+        data-noise-amp="0.6"
+        data-curvature="0.1"
+        data-tint="#A7EF9E"
+        data-mouse-strength="0.5"
+        data-brightness="0.6"
+        aria-hidden="true"
+      ></div>
+      <img class="robostack-hero-robot" src="../assets/cases/robostack/robot.png" alt="" width="600" height="800" aria-hidden="true" />
+      <div class="quest-title-wrap">
+        <h1 class="quest-title robostack-hero-title" aria-label="Welcome to Robostack">
+          <span class="line"><span>WELCOME TO</span></span>
+          <span class="line"><span class="robostack-typewriter" data-type-text="ROBOSTACK">ROBOSTACK</span></span>
+        </h1>
+      </div>
+
+      <div class="scroll-hint quest-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="quest-summary" data-reveal>
+      <div class="quest-summary-inner">
+        <div class="quest-meta-strip">
+          <div class="quest-meta-item"><span>Year</span><strong>2025</strong></div>
+          <div class="quest-meta-item"><span>Role</span><strong>External Consultant</strong></div>
+          <div class="quest-meta-item"><span>Type</span><strong>AI Robotics · Visual Design</strong></div>
+        </div>
+        <p>An exploratory robot AI training platform website, focused on presenting physical world models and visualizing AI training effects. It was my first project to bring AI pipelines into the design workflow, shaping an atompunk visual style.</p>
+      </div>
+    </section>
+
+    <section class="quest-section outcome-reflection-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>Outcome & Reflection</p>
+        <h2 class="quest-section-title" data-reveal>Robostack turned an abstract robot AI training concept into a clearer visual story.</h2>
+        <div class="quest-copy" data-reveal>
+          <p>Robostack was an exploratory robot AI training platform website focused on presenting physical world models and visualizing AI training effects. The work gave the early product a more tangible first impression, using an atompunk visual language to make the relationship between model, training, and outcome easier to understand.</p>
+        </div>
+        <div class="quest-metrics">
+          <article data-reveal><strong>World Model</strong><span>Presented physical world model concepts as the core product signal.</span></article>
+          <article data-reveal><strong>Spatial Intelligence</strong><span>Connected robot training, perception, and visible outcomes in the page story.</span></article>
+          <article data-reveal><strong>Atompunk</strong><span>Shaped a memorable visual language for an exploratory AI robotics direction.</span></article>
+        </div>
+        <div class="quest-lesson-list">
+          <article data-reveal><span>01</span><h3>Make the model visible first</h3><p>For a robotics AI product, the most important story is not an abstract capability claim. The page needs to show the physical world model and make the training effect feel inspectable.</p></article>
+          <article data-reveal><span>02</span><h3>Style can reduce technical distance</h3><p>The atompunk direction gave the project a recognizable atmosphere while keeping the product grounded in robot training, spatial intelligence, and machine perception.</p></article>
+          <article data-reveal><span>03</span><h3>AI pipelines changed the design process</h3><p>This was my first project bringing AI pipelines into the design workflow. It helped accelerate visual exploration while still requiring careful curation to keep the final direction coherent.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <a class="quest-next" href="montecarlo.html" data-reveal>
+      <div>
+        <span>Next project</span>
+        <strong>Montecarlo</strong>
+        <p>Innovation hackathon / Specialized AI agent</p>
+      </div>
+      <i aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M3 15L15 3M15 3H5M15 3V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </i>
+    </a>
+
+    <footer class="quest-footer">
+      <p>(c) 2026 Duoasa - UI/UX Designer</p>
+    </footer>
+  </main>
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="robostack-faulty-terminal.js?v=20260529-formal"></script>
+  <script src="robostack.js?v=20260529-formal"></script>
+</body>
+</html>

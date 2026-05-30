@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Montecarlo specialized AI agent prototype and hackathon demo case study by Duoasa." />
+  <title>Montecarlo - Duoasa Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" /></noscript>
+  <link rel="stylesheet" href="montecarlo.css?v=20260529-prism-perf" />
+  <script>
+    (function () {
+      try {
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      } catch (e) {}
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var theme = saved === "light" || saved === "dark" ? saved : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    }());
+  </script>
+</head>
+<body class="quest-page case-montecarlo">
+  <div id="questPreloader" class="quest-preloader" aria-hidden="true">
+    <div class="quest-pl-panel quest-pl-top"></div>
+    <div class="quest-pl-panel quest-pl-bottom"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-arrow">
+      <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L19 13.3L11.6 15.3L7.8 23L2 2Z" fill="var(--fg)" stroke="var(--bg)" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="cursor-label">
+      <span class="cursor-dot"></span>
+      <span id="cursorLabelText">Guest</span>
+    </div>
+  </div>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Duoasa home">Duoasa</a>
+    <div class="nav-right quest-nav-right">
+      <a href="../index.html#project" class="quest-back-link">Back home</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+        <span id="themeIcon">◐</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="quest-hero">
+      <div
+        class="prism-container montecarlo-prism-bg"
+        data-prism-background
+        data-height="4"
+        data-base-width="4"
+        data-glow="1.18"
+        data-noise="0"
+        data-scale="3.7"
+        data-hue-shift="-0.0416"
+        data-color-frequency="2"
+        data-suspend-when-offscreen="true"
+        aria-hidden="true"
+      ></div>
+      <img class="montecarlo-hero-logo" src="../assets/cases/montecarlo/images/logo.png" alt="Montecarlo logo" width="240" height="240" />
+
+      <div class="quest-title-wrap">
+        <p class="quest-company" data-reveal>Montecarlo / Specialized AI Agent Prototype</p>
+        <h1 class="quest-title" aria-label="Designing Montecarlo as a specialized agent demo">
+          <span class="line quest-title-desktop-line"><span>Designing Montecarlo</span></span>
+          <span class="line quest-title-desktop-line"><span>as a specialized AI agent</span></span>
+          <span class="line quest-title-compact-line"><span>Designing</span></span>
+          <span class="line quest-title-compact-line"><span>Montecarlo as a</span></span>
+          <span class="line quest-title-compact-line"><span>specialized AI agent</span></span>
+        </h1>
+      </div>
+
+      <div class="quest-meta-strip">
+        <div class="quest-meta-item"><span>Year</span><strong>2024/01 - 2024/03</strong></div>
+        <div class="quest-meta-item"><span>Type</span><strong>Hackathon · Specialized AI Agent</strong></div>
+        <div class="quest-meta-item"><span>Role</span><strong>Product Designer · External Consultant</strong></div>
+      </div>
+
+      <div class="scroll-hint quest-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="quest-summary" data-reveal>
+      <div class="quest-summary-inner">
+        <p>Montecarlo was an innovation hackathon project exploring how a general-purpose LLM could be packaged into a professional specialized agent. I designed the interaction prototype and UI prototype, helping the team turn the idea into a demo-ready product story.</p>
+      </div>
+    </section>
+
+    <section class="quest-section brand-operations-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>01 - Project Introduction</p>
+        <h2 class="quest-section-title" data-reveal>Montecarlo connects AI developers to lower-cost, more reliable inference on DePIN.</h2>
+        <div class="brand-operations-copy" data-reveal>
+          <span>Project Introduction</span>
+          <h3>Middleware for accessible AI inference services.</h3>
+          <p>Montecarlo is middleware that helps AI developers integrate AI inference services with lower cost and higher availability by orchestrating DePIN devices. It turns distributed GPU resources, model access, API gateways, smart contracts, coordinators, validators, and aggregators into a service layer for AI applications.</p>
+          <p>The deck frames the opportunity around three core needs: reducing the high cost of AI services, improving the reliability of DePIN hardware, and giving developers the simplest possible access. Montecarlo answers with pay-as-you-go inference, single inference requests that are 90% cheaper than OpenAI, 99.99% uptime, scale-out in seconds, and access to 600k+ AI models with one line of code.</p>
+        </div>
+
+        <div class="brand-operations-material-slot ui-scroll-stack-wrap">
+          <p class="quest-subtitle" data-reveal>About Monte Carlo</p>
+          <div class="ui-scroll-stack" data-stack-position="35" data-base-scale="0.8" data-stack-gap="48" data-stack-step="340" data-stack-opacity-start="0.72" data-stack-opacity-end="0.94" aria-label="About Monte Carlo deck slides">
+            <div class="ui-stack-stage">
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/1.jpg" alt="Monte Carlo deck slide 1 - What is Monte Carlo" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/2.jpg" alt="Monte Carlo deck slide 2 - Why we need Monte Carlo" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/3.jpg" alt="Monte Carlo deck slide 3 - Save costs for AI developers" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/4.jpg" alt="Monte Carlo deck slide 4 - Stable hardware services" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/5.jpg" alt="Monte Carlo deck slide 5 - How can this be achieved" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/6.jpg" alt="Monte Carlo deck slide 6 - Simplest access" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/7.jpg" alt="Monte Carlo deck slide 7 - Virtualization and scheduling" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/8.jpg" alt="Monte Carlo deck slide 8 - Competitor analysis" loading="lazy" /></div>
+              </article>
+              <article class="ui-stack-card brand-operations-stack-card" data-stack-card>
+                <div class="ui-stack-visual"><img src="../assets/cases/montecarlo/about/9.jpg" alt="Monte Carlo deck slide 9 - Value proposition" loading="lazy" /></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section highlight-design-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>02 - My Responsibility</p>
+        <h2 class="quest-section-title" data-reveal>I worked as the external product designer for the interaction and UI prototype.</h2>
+        <div class="responsibility-layout">
+          <div class="quest-copy" data-reveal>
+            <h3>Product Translation</h3>
+            <p>My responsibility was to translate Montecarlo's AI inference middleware story into a product experience that could be understood during an innovation hackathon demo. I focused on the moments where a technical infrastructure idea needed to become visible, usable, and presentation-ready.</p>
+            <h3>Prototype Design</h3>
+            <p>I designed the interaction prototype and UI prototype, including the prompt-to-result flow, response structure, key interface states, and demo rhythm. The goal was to show how general LLM capability could be packaged into a specialized agent experience without relying on a long verbal explanation.</p>
+            <h3>Visual System</h3>
+            <p>Although this was a hackathon demo project, I still designed Montecarlo's complete brand visual system and unified visual language. The logo uses the complex geometric forms favored in AI products, while rectangular chip-like linework and flickering light spots that suggest large-model reasoning are woven into the visual direction.</p>
+          </div>
+          <figure class="responsibility-visual" data-parallax-visual>
+            <img src="../assets/cases/montecarlo/about/10.jpg" alt="Monte Carlo brand visual system slide" loading="lazy" />
+          </figure>
+        </div>
+        <figure class="demo-ui-showcase" data-reveal>
+          <img src="../assets/cases/montecarlo/ui-demo.jpg" alt="Monte Carlo specialized agent demo UI" loading="lazy" />
+        </figure>
+
+      </div>
+    </section>
+
+    <section class="quest-section outcome-reflection-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>03 - Outcome & Reflection</p>
+        <h2 class="quest-section-title" data-reveal>The project captured an early moment in professional AI agent exploration.</h2>
+        <div class="quest-copy" data-reveal>
+          <p>Montecarlo was built before AI agents became a mature product category. The project tested how a general LLM could be packaged into a professional specialized agent, and the prototype helped the team present the idea clearly enough to win recognition during the hackathon.</p>
+        </div>
+        <div class="quest-metrics">
+          <article data-reveal><strong>Demo</strong><span>Designed the interaction and UI prototype that supported the hackathon presentation.</span></article>
+          <article data-reveal><strong>Early agent</strong><span>Explored specialized agent packaging for a general-purpose AI model in a domain-specific service context.</span></article>
+          <article data-reveal><strong>Award</strong><span>Received an excellent project award in the hackathon.</span></article>
+        </div>
+        <div class="quest-lesson-list">
+          <article data-reveal><span>01</span><h3>AI products need visible reasoning</h3><p>For a specialized agent, the answer alone was not enough. The prototype needed to show how the system moved from prompt to analysis to recommendation.</p></article>
+          <article data-reveal><span>02</span><h3>Hackathon demos need compressed product clarity</h3><p>The interface had to communicate product value quickly: lower AI service cost, better availability, simple access, and a clear user flow.</p></article>
+          <article data-reveal><span>03</span><h3>Agent packaging turns capability into product</h3><p>The project showed how a general model becomes more useful when wrapped with domain context, interaction structure, and task-specific UI.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <a class="quest-next" href="abex.html" data-reveal>
+      <div>
+        <span>Next project</span>
+        <strong>ABEx</strong>
+        <p>Brand VI / Product UI</p>
+      </div>
+      <i aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M3 15L15 3M15 3H5M15 3V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </i>
+    </a>
+
+    <footer class="quest-footer">
+      <p>(c) 2026 Duoasa - UI/UX Designer</p>
+    </footer>
+  </main>
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="montecarlo-prism.js?v=20260529-prism-perf"></script>
+  <script src="montecarlo.js?v=20260529-formal-laser"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="NeoTaste Quest onboarding gamification case study by Duoasa." />
+  <title>NeoTaste Quest - Duoasa Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" /></noscript>
+  <link rel="stylesheet" href="neotaste-quest.css?v=20260529-independent" />
+  <script>
+    (function () {
+      try {
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      } catch (e) {}
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var theme = saved === "light" || saved === "dark" ? saved : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    }());
+  </script>
+</head>
+<body class="quest-page case-neotaste-quest">
+  <div id="questPreloader" class="quest-preloader" aria-hidden="true">
+    <div class="quest-pl-panel quest-pl-top"></div>
+    <div class="quest-pl-panel quest-pl-bottom"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-arrow">
+      <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L19 13.3L11.6 15.3L7.8 23L2 2Z" fill="var(--fg)" stroke="var(--bg)" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="cursor-label">
+      <span class="cursor-dot"></span>
+      <span id="cursorLabelText">Guest</span>
+    </div>
+  </div>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Duoasa home">Duoasa</a>
+    <div class="nav-right quest-nav-right">
+      <a href="../index.html#project" class="quest-back-link">Back home</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+        <span id="themeIcon">◐</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="quest-hero">
+      <img class="quest-hero-cover" src="../assets/cases/neotaste-quest/images/hero.svg" alt="" />
+      <div class="quest-hero-overlay"></div>
+      <span class="quest-hero-number">01</span>
+
+      <div class="quest-title-wrap">
+        <p class="quest-company" data-reveal>NeoTaste / Retention UX</p>
+        <h1 class="quest-title" aria-label="Turning free trial users into loyal members">
+          <span class="line"><span>Turning <br class="quest-mobile-break" />free</span></span>
+          <span class="line"><span>trial users <br class="quest-mobile-break" />into</span></span>
+          <span class="line"><span>loyal <br class="quest-mobile-break" />members</span></span>
+        </h1>
+      </div>
+
+      <div class="quest-meta-strip">
+        <div class="quest-meta-item"><span>Company</span><strong>NeoTaste</strong></div>
+        <div class="quest-meta-item"><span>Year</span><strong>2025 - 2026</strong></div>
+        <div class="quest-meta-item"><span>Type</span><strong>Retention · Gamification</strong></div>
+        <div class="quest-meta-item"><span>Role</span><strong>Senior Product Designer</strong></div>
+      </div>
+
+      <div class="scroll-hint quest-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="quest-summary" data-reveal>
+      <div class="quest-summary-inner">
+        <p>NeoTaste helps people discover restaurants, bars, and cafes through exclusive app-only deals. The Quest guided trial users through five actions that make the app click: understand redemption, personalize food preferences, save places, redeem deals, and review the experience.</p>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>01 - Problem Statement</p>
+        <h2 class="quest-section-title" data-reveal>Many trial users were redeeming just one deal.</h2>
+        <div class="quest-two-col">
+          <div class="quest-copy" data-reveal>
+            <p>NeoTaste already had a strong value proposition, but a large share of trial users stopped before they experienced enough of the product to understand why it was worth paying for.</p>
+            <p>The critical behavior was not app opens. It was reaching a second meaningful redemption, because users who crossed that line were much more likely to convert.</p>
+          </div>
+          <div class="quest-chart-card" data-reveal>
+            <span>Deal redemptions per trial user</span>
+            <div class="quest-bars">
+              <div><i style="height: 100%"></i><small>1 deal</small></div>
+              <div><i style="height: 48%"></i><small>2 deals</small></div>
+              <div><i style="height: 30%"></i><small>3+ deals</small></div>
+            </div>
+            <p>Reaching two redemptions became the behavior to design around.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>02 - Hypothesis</p>
+        <h2 class="quest-section-title" data-reveal>Guide behavior early, without making onboarding feel like homework.</h2>
+        <div class="quest-two-col">
+          <div class="quest-copy" data-reveal>
+            <p>We explored streaks, discounts, daily challenges, and checklist formats. Streaks rewarded opening the app, but the business needed users to learn the actions that predicted retention.</p>
+            <p>The hypothesis: if new users complete a lightweight quest around the app's highest-signal actions, they will understand the product faster and be more likely to convert.</p>
+          </div>
+          <blockquote class="quest-quote" data-reveal>
+            <p>If the quest helps users get to their first real win, the reward can be progress and status instead of a cash discount.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>03 - Research & Analysis</p>
+        <h2 class="quest-section-title" data-reveal>Three workstreams pointed to one product direction.</h2>
+        <div class="quest-research-grid">
+          <article class="quest-card" data-reveal>
+            <span>Concept validation</span>
+            <h3>Test the quest shape</h3>
+            <p>Unmoderated studies checked task count, reward expectations, and whether a quest felt supportive or forced.</p>
+          </article>
+          <article class="quest-card" data-reveal>
+            <span>Competitive scan</span>
+            <h3>Learn from habit loops</h3>
+            <p>We reviewed onboarding patterns from marketplace, food, and habit products to find useful progress mechanics.</p>
+          </article>
+          <article class="quest-card" data-reveal>
+            <span>Cohort data</span>
+            <h3>Baseline the behavior</h3>
+            <p>Data analysis focused on trial redemptions, feature discovery, and the relationship between second use and conversion.</p>
+          </article>
+        </div>
+        <div class="quest-research-visual" data-reveal>
+          <div class="research-board">
+            <span>Onboarding map</span>
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p>Patterns that worked best shared the same quality: they gave users a visible path to value, then got out of the way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>04 - Stakeholder Management</p>
+        <h2 class="quest-section-title" data-reveal>Keeping the quest focused meant saying no to attractive extras.</h2>
+        <div class="quest-stakeholder-grid">
+          <article class="quest-card" data-reveal>
+            <span>Growth</span>
+            <h3>Needed measurable conversion impact</h3>
+            <p>We tied the quest to trial-to-paid conversion and second redemption instead of softer engagement alone.</p>
+          </article>
+          <article class="quest-card" data-reveal>
+            <span>Product</span>
+            <h3>Needed a small surface area</h3>
+            <p>The final scope avoided a broad achievement system and shipped as a focused onboarding mechanic.</p>
+          </article>
+          <article class="quest-card" data-reveal>
+            <span>Design system</span>
+            <h3>Needed reusable reward assets</h3>
+            <p>Badge colors, level states, and celebration pieces were added in a way the team could extend later.</p>
+          </article>
+          <article class="quest-card" data-reveal>
+            <span>Data</span>
+            <h3>Needed clean test conditions</h3>
+            <p>The release plan kept tracking simple enough to compare quest users against a clear control group.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>05 - Design Process</p>
+        <h2 class="quest-section-title" data-reveal>Five steps to get new users to their first real win.</h2>
+        <div class="quest-copy" data-reveal>
+          <p>The final solution used five tasks that introduced the product, improved personalization, and pushed users toward the behavior that mattered: redeeming real deals.</p>
+        </div>
+
+        <div class="quest-task-grid">
+          <article class="quest-task" data-reveal>
+            <b>Task 01</b><i>Guide</i><h3>See how NeoTaste works</h3><p>Explain booking and redemption before users face the restaurant moment.</p><span>+50 XP</span>
+          </article>
+          <article class="quest-task" data-reveal>
+            <b>Task 02</b><i>Taste</i><h3>Personalize food choices</h3><p>Collect early taste signals so recommendations feel relevant from day one.</p><span>+80 XP</span>
+          </article>
+          <article class="quest-task" data-reveal>
+            <b>Task 03</b><i>Save</i><h3>Save restaurants you love</h3><p>Turn browsing into a personal shortlist and create a reason to return.</p><span>+60 XP</span>
+          </article>
+          <article class="quest-task" data-reveal>
+            <b>Task 04</b><i>2x</i><h3>Redeem your first two deals</h3><p>Move users past the first-use threshold into repeated value.</p><span>+120 XP</span>
+          </article>
+          <article class="quest-task" data-reveal>
+            <b>Task 05</b><i>Rate</i><h3>Review the experience</h3><p>Close the loop and make the community value visible.</p><span>+70 XP</span>
+          </article>
+          <article class="quest-task quest-task-reward" data-reveal>
+            <b>Reward</b><i>Win</i><h3>Unlock Taster badge</h3><p>Completion ends with a profile badge and a restrained celebration moment.</p><span>Badge</span>
+          </article>
+        </div>
+
+        <div class="quest-subsection">
+          <p class="quest-subtitle" data-reveal>The design solution</p>
+          <div class="quest-phone-grid">
+            <figure class="quest-phone-card" data-reveal>
+              <div class="mini-phone map-state"></div>
+              <figcaption>Floating quest entry point on Discover</figcaption>
+            </figure>
+            <figure class="quest-phone-card" data-reveal>
+              <div class="mini-phone quest-new-state"></div>
+              <figcaption>Quest view: first-time user</figcaption>
+            </figure>
+            <figure class="quest-phone-card" data-reveal>
+              <div class="mini-phone quest-progress-state"></div>
+              <figcaption>Quest view: tasks in progress</figcaption>
+            </figure>
+            <figure class="quest-phone-card" data-reveal>
+              <div class="mini-phone quest-complete-state"></div>
+              <figcaption>Quest view: all tasks completed</figcaption>
+            </figure>
+            <figure class="quest-phone-card" data-reveal>
+              <div class="mini-phone celebration-state"></div>
+              <figcaption>Celebration: badge unlock</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="quest-subsection">
+          <p class="quest-subtitle" data-reveal>Design system updates</p>
+          <div class="quest-system-grid">
+            <div class="quest-token-table" data-reveal>
+              <div><span>Token</span><span>Light</span><span>Usage</span></div>
+              <div><span>level.01.strong</span><span><i class="swatch green"></i>green.400</span><span>Taster badge</span></div>
+              <div><span>level.02.strong</span><span><i class="swatch blue"></i>blue.500</span><span>Explorer badge</span></div>
+              <div><span>level.03.strong</span><span><i class="swatch orange"></i>mango.500</span><span>Regular badge</span></div>
+              <div><span>level.04.strong</span><span><i class="swatch gray"></i>gray.400</span><span>Expert badge</span></div>
+              <div><span>level.05.strong</span><span><i class="swatch yellow"></i>mustard.500</span><span>Legend badge</span></div>
+            </div>
+            <div class="badge-samples" data-reveal>
+              <span>Badge colors</span>
+              <div>
+                <i class="green"></i><i class="blue"></i><i class="orange"></i><i class="gray"></i><i class="yellow"></i>
+              </div>
+              <p>Two colors per level: one badge tone and one lighter confetti tone.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quest-subsection">
+          <p class="quest-subtitle" data-reveal>Interactions</p>
+          <div class="quest-demo-grid">
+            <figure class="motion-phone" data-reveal>
+              <div class="motion-screen preferences-motion"></div>
+              <figcaption>Food preferences: selection flow</figcaption>
+            </figure>
+            <figure class="motion-phone" data-reveal>
+              <div class="motion-screen progress-motion"></div>
+              <figcaption>Food preferences: task progress bar</figcaption>
+            </figure>
+            <figure class="motion-phone" data-reveal>
+              <div class="motion-screen badge-motion"></div>
+              <figcaption>Badge unlock: celebration</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>06 - Metrics & KPIs</p>
+        <h2 class="quest-section-title" data-reveal>Two bets. Both paid off.</h2>
+        <div class="quest-copy" data-reveal>
+          <p>The Quest launched to 25% of new trial users and was measured against a control group. The main goal was conversion, with feature discovery and redemptions as supporting signals.</p>
+        </div>
+        <div class="quest-metrics">
+          <article data-reveal><strong>+22%</strong><span>More free trial users converted to paid among quest users.</span></article>
+          <article data-reveal><strong>48%</strong><span>Quest completion rate within the optional 30-day trial window.</span></article>
+          <article data-reveal><strong>2x</strong><span>More deals redeemed in month one by quest completers.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <div class="quest-section-inner">
+        <p class="quest-section-label" data-reveal>07 - Conclusion</p>
+        <h2 class="quest-section-title" data-reveal>Guide users early.</h2>
+        <div class="quest-copy" data-reveal>
+          <p>Users did not need more features. They needed a clear path to the actions that make NeoTaste valuable. Once they redeemed a couple of deals and saw the app working for them, they understood why to stay.</p>
+        </div>
+        <div class="quest-lesson-list">
+          <article data-reveal><span>01</span><h3>Achievement beats discounts</h3><p>Status, progress, and a badge were more sustainable than paying users to complete basic actions.</p></article>
+          <article data-reveal><span>02</span><h3>Optional features need a strong entry point</h3><p>The Discover entry point made the quest visible without interrupting the default browsing flow.</p></article>
+          <article data-reveal><span>03</span><h3>Constraints sharpen decisions</h3><p>Limiting the quest to five actions forced a sharper question: which behaviors actually predict retention?</p></article>
+        </div>
+      </div>
+    </section>
+
+    <a class="quest-next" href="robostack.html" data-reveal>
+      <div>
+        <span>Next project</span>
+        <strong>Robostack</strong>
+        <p>AI robotics / Web design</p>
+      </div>
+      <i aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M3 15L15 3M15 3H5M15 3V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </i>
+    </a>
+
+    <footer class="quest-footer">
+      <p>(c) 2026 Duoasa - UI/UX Designer</p>
+    </footer>
+  </main>
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="neotaste-quest.js?v=20260529-independent"></script>
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="UI/UX designer portfolio with selected product work, experience, awards, and contact details." />
+  <title>Duoasa - UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Roboto:wght@300;400;500;700;900&display=swap" /></noscript>
+  <link rel="stylesheet" href="styles.css?v=20260530-hobby-spacing" />
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var theme = saved === "light" || saved === "dark" ? saved : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    }());
+  </script>
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-name"><span>Duoasa</span></div>
+    <div class="pl-bar-wrap"><div class="pl-bar" id="plBar"></div></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-arrow">
+      <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L19 13.3L11.6 15.3L7.8 23L2 2Z" fill="var(--fg)" stroke="var(--bg)" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="cursor-label">
+      <span class="cursor-dot"></span>
+      <span id="cursorLabelText">Welcom</span>
+    </div>
+  </div>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo" aria-label="Duoasa home">Duoasa</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#hobbies">More</a></li>
+      </ul>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+        <span id="themeIcon">◐</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-orb-background" aria-hidden="true"></div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow"><span>senior UI/UX designer</span></p>
+        <h1 class="hero-title" aria-label="XuChenChen Duoasa">
+          <span class="line"><span>XuChenChen</span></span>
+          <span class="line hero-glow-line"><span class="hero-glow-text" data-text="Duoasa">Duoasa</span></span>
+        </h1>
+
+        <div class="hero-bottom">
+          <p class="hero-desc">UI/UX designer with a computer science background and 9+ years of cross-industry project experience.</p>
+          <div class="hero-pills" aria-label="Profile highlights">
+            <span class="pill available"><span></span>Available for work</span>
+            <span class="pill">China, Chongqing</span>
+            <button class="pill email-pill" type="button" data-copy-email="553486735@qq.com" aria-label="Copy hero email address">
+              <span>553486735@QQ.COM</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Full-stack UI/UX</span>
+        <span>Systems Mindset</span>
+        <span>Multi-platform UI</span>
+        <span>AI Product Design</span>
+        <span>Rapid Prototyping</span>
+        <span>Interaction Design</span>
+        <span>Motion Design</span>
+        <span>Team Collaboration</span>
+        <span>Data-led Design</span>
+        <span>Fast Learning</span>
+        <span>AI Pipelines</span>
+        <span>Full-stack UI/UX</span>
+        <span>Systems Mindset</span>
+        <span>Multi-platform UI</span>
+        <span>AI Product Design</span>
+        <span>Rapid Prototyping</span>
+        <span>Interaction Design</span>
+        <span>Motion Design</span>
+        <span>Team Collaboration</span>
+        <span>Data-led Design</span>
+        <span>Fast Learning</span>
+        <span>AI Pipelines</span>
+      </div>
+    </div>
+
+    <section id="project" class="section">
+      <header class="section-header">
+        <div>
+          <p class="section-label">Selected projects</p>
+          <h2 class="section-title"><span class="line"><span>Project</span></span></h2>
+        </div>
+      </header>
+
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">01</span>
+              <span class="project-status status-production"><span></span>In Progress</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2025.10 - Present / Product Designer</p>
+              <h3>Aegis</h3>
+              <p class="project-summary">An LLM-powered personal wealth advisor agent that helps users complete complex derivatives, leverage, and yield aggregation workflows with risk controls and consent.</p>
+              <div class="tags">
+                <span>LLM Agent</span>
+                <span>Wealth Advisor</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>Early</strong>
+                <span>Product design</span>
+              </div>
+              <div>
+                <strong>Tactical HUD</strong>
+                <span>Design style</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual emerald aegis-card-visual">
+            <img
+              src="assets/cases/aegis/card-1600.jpg?v=20260529-aegis-2"
+              srcset="assets/cases/aegis/card-800.jpg?v=20260529-aegis-2 800w, assets/cases/aegis/card-1200.jpg?v=20260529-aegis-2 1200w, assets/cases/aegis/card-1600.jpg?v=20260529-aegis-2 1600w, assets/cases/aegis/card.jpg?v=20260529-aegis-2 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="Aegis AI wealth advisor brand cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/xlend.html" role="link" tabindex="0" aria-label="Open XLend case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">02</span>
+              <span class="project-status status-live"><span></span>Online</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2024 - Present / Design Lead</p>
+              <h3>XLend</h3>
+              <p class="project-summary">An aggregated finance platform shaped from product identity and VI planning through website, UI, and launch-ready UX flows.</p>
+              <div class="tags">
+                <span>Finance Platform</span>
+                <span>VI/UI System</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>0-1</strong>
+                <span>Brand and product design</span>
+              </div>
+              <div>
+                <strong>Integrated</strong>
+                <span>Design system</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual blue xlend-card-visual">
+            <img src="assets/cases/xlend/images/xlend-card-cover.jpg" alt="Extrafi XLend brand cover" loading="lazy" decoding="async" />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/extrafi.html" role="link" tabindex="0" aria-label="Open Extrafi case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">03</span>
+              <span class="project-status status-live"><span></span>Online</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2023 - Present / Design Lead</p>
+              <h3>Extrafi</h3>
+              <p class="project-summary">A multi-market finance product upgraded through a V2.0 visual system, website refresh, and sharper product interface direction.</p>
+              <div class="tags">
+                <span>Finance Product</span>
+                <span>Product System</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>Scale</strong>
+                <span>Growth milestone support</span>
+              </div>
+              <div>
+                <strong>V2.0</strong>
+                <span>Full visual upgrade</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual cyan extrafi-card-visual">
+            <img
+              src="assets/cases/extrafi/card-1600.jpg"
+              srcset="assets/cases/extrafi/card-800.jpg 800w, assets/cases/extrafi/card-1200.jpg 1200w, assets/cases/extrafi/card-1600.jpg 1600w, assets/cases/extrafi/card.jpg 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="Extrafi V2.0 brand cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/robostack.html" role="link" tabindex="0" aria-label="Open Robostack case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">04</span>
+              <span class="project-status status-demo"><span></span>Demo</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2025 / External Consultant</p>
+              <h3>Robostack</h3>
+              <p class="project-summary">An exploratory robot AI training platform website, focused on presenting physical world models and visualizing AI training effects. It was my first project to bring AI pipelines into the design workflow, shaping an atompunk visual style.</p>
+              <div class="tags">
+                <span>AI Robotics</span>
+                <span>Visual Design</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>World Model</strong>
+                <span>Spatial intelligence</span>
+              </div>
+              <div>
+                <strong>Atompunk</strong>
+                <span>Visual language</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual emerald robostack-card-visual">
+            <img
+              src="assets/cases/robostack/card-1600.jpg"
+              srcset="assets/cases/robostack/card-800.jpg 800w, assets/cases/robostack/card-1200.jpg 1200w, assets/cases/robostack/card-1600.jpg 1600w, assets/cases/robostack/card.jpg 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="Robostack robot AI training platform cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/montecarlo.html" role="link" tabindex="0" aria-label="Open Montecarlo case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">05</span>
+              <span class="project-status status-demo"><span></span>Demo</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2024 / Product Designer</p>
+              <h3>Montecarlo</h3>
+              <p class="project-summary">A specialized AI agent demo created for an innovation hackathon, covering product framing, interaction prototype, UI prototype, and brand visual system.</p>
+              <div class="tags">
+                <span>AI Agent</span>
+                <span>Prototype</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>Demo</strong>
+                <span>Hackathon prototype</span>
+              </div>
+              <div>
+                <strong>Award</strong>
+                <span>Outstanding project</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual indigo montecarlo-card-visual">
+            <img
+              src="assets/cases/montecarlo/card-1600.jpg"
+              srcset="assets/cases/montecarlo/card-800.jpg 800w, assets/cases/montecarlo/card-1200.jpg 1200w, assets/cases/montecarlo/card-1600.jpg 1600w, assets/cases/montecarlo/card.jpg 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="Montecarlo AI agent brand cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/abex.html" role="link" tabindex="0" aria-label="Open ABEx case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">06</span>
+              <span class="project-status status-live"><span></span>Online</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2022 - 2023 / Design Partner</p>
+              <h3>ABEx</h3>
+              <p class="project-summary">A financial service platform launched from zero through brand identity, web UI, interaction design, and marketing materials.</p>
+              <div class="tags">
+                <span>Trading System</span>
+                <span>Product Launch</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>All UI</strong>
+                <span>End-to-end design</span>
+              </div>
+              <div>
+                <strong>Top</strong>
+                <span>Category position</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual violet abex-card-visual">
+            <img
+              src="assets/cases/abex/card-1600.jpg"
+              srcset="assets/cases/abex/card-800.jpg 800w, assets/cases/abex/card-1200.jpg 1200w, assets/cases/abex/card-1600.jpg 1600w, assets/cases/abex/card.jpg 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="ABEx brand identity cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card" data-link="cases/soda-protocol.html" role="link" tabindex="0" aria-label="Open SODA Protocol case study">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">07</span>
+              <span class="project-status status-live"><span></span>Online</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2021 - 2022 / UI/UX Designer</p>
+              <h3>SODA Protocol</h3>
+              <p class="project-summary">A finance product built across V1.0 to V3.0, spanning brand system, app UI, launch media, social assets, and fundraising deck.</p>
+              <div class="tags">
+                <span>Finance App</span>
+                <span>Funding Deck</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>V1-V3</strong>
+                <span>Product iterations</span>
+              </div>
+              <div>
+                <strong>Round</strong>
+                <span>Angel round support</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual emerald soda-card-visual">
+            <img
+              src="assets/cases/soda/card-1600.jpg"
+              srcset="assets/cases/soda/card-1200.jpg 1200w, assets/cases/soda/card-1600.jpg 1600w, assets/cases/soda/card.jpg 3200w"
+              sizes="(max-width: 900px) calc(100vw - 48px), calc((100vw - 88px) / 2)"
+              alt="SODA Protocol brand cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="image-overlay"></div>
+            <span class="project-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">08</span>
+              <span class="project-status status-industry"><span></span>Industry Project</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2017 - 2020 / Systems Engineer</p>
+              <h3>Chongqing Airport Smart Logistics</h3>
+              <p class="project-summary">A cargo logistics operations system, covering early research, system planning, subsystem design participation, build support, and operations.</p>
+              <div class="tags">
+                <span>Aviation Ops</span>
+                <span>System Planning</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>Long-term</strong>
+                <span>Participation</span>
+              </div>
+              <div>
+                <strong>Promotion</strong>
+                <span>Support</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual blue ckg-card-visual">
+            <img src="assets/cases/chongqing-airport/ckg-terminal.jpg" alt="Chongqing Jiangbei International Airport terminal exterior" loading="lazy" decoding="async" />
+            <div class="image-overlay"></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">09</span>
+              <span class="project-status status-event"><span></span>Exhibition</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2019 / Lead Planner</p>
+              <h3>Smart China Expo Airport Pavilion</h3>
+              <p class="project-summary">A 400-square-meter exhibition experience for airport innovation, spanning pavilion planning, visual design, build direction, interactive UI, and video planning.</p>
+              <div class="tags">
+                <span>Exhibition</span>
+                <span>Interactive UI</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>400 sqm</strong>
+                <span>Integrated pavilion</span>
+              </div>
+              <div>
+                <strong>End-to-end</strong>
+                <span>Design leadership</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual amber expo-credits-card-visual" data-lazy-video>
+            <img class="expo-credit-poster" src="assets/mobile-finance.svg" alt="Smart China Expo airport pavilion interactive experience" />
+            <video class="expo-credit-video" muted loop playsinline preload="none" poster="assets/mobile-finance.svg" aria-hidden="true">
+              <source data-src="assets/cases/smart-china-expo/credits-bg.mp4" type="video/mp4" />
+            </video>
+            <div class="image-overlay"></div>
+            <div class="expo-credit-stage" aria-hidden="true">
+              <div class="expo-credit-roll">
+                <p class="expo-credit-title">2019 SMARTCHINA EXPO<br>CKG PAVILION</p>
+                <p><span>CKG Pavilion</span><strong>Chief Planner</strong></p>
+                <p><span>Pavilion Build</span><strong>Production Coordinator</strong></p>
+                <p><span>Pavilion Visuals</span><strong>Art Director</strong></p>
+                <p><span>Build Design</span><strong>Construction Supervisor</strong></p>
+                <p><span>Screen Saver</span><strong>Motion Designer</strong></p>
+                <p><span>3D &amp; AR Content</span><strong>Creative Producer</strong></p>
+                <p><span>Interactive System</span><strong>Interface Designer</strong></p>
+                <p><span>Promo Video</span><strong>Executive Producer</strong></p>
+                <p><span>Video Shoot</span><strong>On-set Supervisor</strong></p>
+                <p><span>Promo Editing</span><strong>Post-production Supervisor</strong></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-info">
+            <div class="project-top with-badge">
+              <span class="project-num">10</span>
+              <span class="project-status status-event"><span></span>Exhibition</span>
+            </div>
+            <div class="project-main">
+              <p class="project-year">2018 / Event Planner</p>
+              <h3>Yunqi Summit Airport Launch</h3>
+              <p class="project-summary">A launch event and keynote package for airport operations communication, including content structure, keynote production, and promotional video supervision.</p>
+              <div class="tags">
+                <span>Keynote</span>
+                <span>Video Planning</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>Keynote</strong>
+                <span>Launch deck production</span>
+              </div>
+              <div>
+                <strong>Media</strong>
+                <span>Video supervision</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual cyan yunqi-carousel-card-visual" role="img" aria-label="Yunqi Summit airport launch keynote and media package">
+            <div class="project-image-carousel" aria-hidden="true">
+              <img class="project-carousel-image" src="assets/cases/yunqi-summit/launch-1.jpg" alt="" loading="lazy" decoding="async" />
+              <img class="project-carousel-image" src="assets/cases/yunqi-summit/launch-2.jpg" alt="" loading="lazy" decoding="async" />
+              <img class="project-carousel-image" src="assets/cases/yunqi-summit/launch-3.jpg" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="image-overlay"></div>
+          </div>
+        </article>
+        <div class="project-more-indicator">
+          <span class="project-more-pill" aria-label="More projects not shown">...</span>
+        </div>
+      </div>
+
+      <div id="hobbies" class="project-hobby-subsection">
+        <header class="section-header project-hobby-header">
+          <div>
+            <p class="section-label">More about me</p>
+            <h2 class="section-title"><span class="line"><span>Interests</span></span></h2>
+          </div>
+        </header>
+
+        <div class="hobby-grid" data-active-hobby="gaming">
+          <div class="hobby-copy">
+            <p class="hobby-intro">Outside of work, I treat my interests as an entry point for observing experiences. Details found in games, photography, music, and urban spaces often, in turn, influence how I judge rhythm, narrative, and emotion. I am drawn to moments that leave a lasting memory: a passage of light, a composition, an interaction response, or a pause that arrives at exactly the right time can all become sources of inspiration for later design work.</p>
+            <button class="hobby-choice is-active" type="button" data-hobby-target="gaming" aria-pressed="true">
+              <img class="hobby-choice-icon" src="assets/interests/sc4.png" width="52" height="52" alt="" loading="lazy" decoding="async" aria-hidden="true" />
+              <span class="hobby-choice-text"><strong>My favorite game is SimCity 4.</strong> Since junior high school, I have been fascinated by the feeling of taking the designs in my mind and building them, step by step, into cities that can be concretely seen on screen. Planning every road, every building, and every landscape so that their composition is not only visually pleasing but also convenient for the lives of my simulated citizens gives me an unprecedented sense of achievement and joy. I think this feeling later contributed to my becoming a UI/UX designer, because this work is likewise a process of bringing ideas from the mind into reality.</span>
+            </button>
+            <button class="hobby-choice" type="button" data-hobby-target="photography" aria-pressed="false">
+              <img class="hobby-choice-icon" src="assets/interests/camera.png" width="52" height="52" alt="" loading="lazy" decoding="async" aria-hidden="true" />
+              <span class="hobby-choice-text"><strong>I also enjoy urban and architectural landscape photography.</strong> Steve Jobs once said, "standing at the intersection of technology and the humanities." Are architecture and the cities assembled from it not the same? Buildings and cities are crystallizations of human technological development, while their design and the services they provide embody humanistic values everywhere. Whenever I press the shutter, I am not only recording the scenery I see in that moment; I am also recording the process by which architects and planners bring the ideas in their minds into our real lives. I often think of this sentence when I design, and I try to reflect it in my work by considering the presentation of technology through a humanistic lens.</span>
+            </button>
+          </div>
+
+          <div class="hobby-gallery masonry-list list" data-masonry-gallery aria-label="Reserved gallery area"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <header class="section-header">
+        <div>
+          <p class="section-label">My story</p>
+          <h2 class="section-title"><span class="line"><span>About</span></span></h2>
+        </div>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>UI/UX designer with a degree in Computer Science and Technology, bringing 9+ years of cross-industry experience across aviation logistics systems, financial platforms, AI products, VI systems, and brand launch materials.</p>
+          <p>I specialize in connecting rational product logic with expressive visual systems. My work spans early product definition, product roadmapping, interaction flows, interface design, VI systems, motion prototypes, and launch-ready visual assets.</p>
+          <p>I am able to bring a product from initial inspiration through to every final pixel, with hands-on experience delivering financial platforms, AI products, project websites, investor decks, and event presentation materials.</p>
+          <p>I adapt well to different types of teams, bringing highly efficient learning ability, technical understanding from my computer science background, cross-disciplinary coordination across VI, UI, UX, and front-end development, and a strong commitment to polished delivery.</p>
+        </div>
+
+        <div class="about-side">
+          <div>
+            <h3>Experience</h3>
+            <ul class="detail-list">
+              <li><span><b>Extra Labs</b><small>Senior UI Designer</small></span><em>2023 - Now</em></li>
+              <li><span><b>Zero Entropy</b><small>Senior UI Designer</small></span><em>2021 - 2023</em></li>
+              <li><span><b>Chongqing Airport</b><small>Systems Engineer</small></span><em>2016 - 2021</em></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Awards &amp; Achievements</h3>
+            <ul class="detail-list">
+              <li><span><b>Outstanding Project</b><small>Montecarlo AI Agent</small></span><em>2024</em></li>
+              <li><span><b>Seed Round Support</b><small>Soda &amp; ABEx</small></span><em>2022 / 2023</em></li>
+              <li><span><b>Annual Best Service Award</b><small>Chongqing Jiangbei International Airport</small></span><em>2019</em></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Skills</h3>
+            <div class="skill-pills">
+              <span>Full-stack UI/UX</span>
+              <span>Systems Mindset</span>
+              <span>Multi-platform UI</span>
+              <span>AI Product Design</span>
+              <span>Rapid Prototyping</span>
+              <span>Interaction Design</span>
+              <span>Motion Design</span>
+              <span>Team Collaboration</span>
+              <span>Data-led Design</span>
+              <span>Fast Learning</span>
+              <span>AI Pipelines</span>
+              <span class="more-skills" aria-label="More skills">...</span>
+            </div>
+          </div>
+          <div>
+            <h3>Work Pipeline</h3>
+            <div class="skill-pills tool-pills">
+              <span><img class="tool-logo" src="assets/tool-figma.png" width="12" height="12" alt="" aria-hidden="true" />Figma</span>
+              <span><img class="tool-logo" src="assets/tool-sketch.png" width="12" height="12" alt="" aria-hidden="true" />Sketch</span>
+              <span><img class="tool-logo" src="assets/tool-spline.png" width="12" height="12" alt="" aria-hidden="true" />Spline</span>
+              <span><img class="tool-logo" src="assets/tool-principle.png" width="12" height="12" alt="" aria-hidden="true" />Principle</span>
+              <span><img class="tool-logo" src="assets/tool-codex.png" width="12" height="12" alt="" aria-hidden="true" />Codex</span>
+              <span><i class="tool-logo-stack" aria-hidden="true"><i class="tool-logo logo-keynote"></i><i class="tool-logo logo-powerpoint"></i></i>Keynote / PowerPoint</span>
+              <span><img class="tool-logo" src="assets/tool-final-cut-pro.png" width="12" height="12" alt="" aria-hidden="true" />Final Cut Pro</span>
+              <span class="more-tools" aria-label="More tools">...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <p class="section-label">Get in touch</p>
+      <h2 class="contact-headline">
+        <span class="line"><span class="contact-thanks">Thanks for visiting</span></span>
+        <span class="line"><span><a class="contact-cta" href="mailto:553486735@qq.com" data-cursor="hello"><span class="contact-cta-text">Contact Me</span><img class="mail-icon" src="assets/contact-mail-icon.png" alt="" aria-hidden="true" /></a></span></span>
+      </h2>
+
+      <footer class="contact-footer">
+        <div>
+          <p>China, Chongqing</p>
+        </div>
+        <div class="social-links">
+          <a href="mailto:553486735@qq.com" data-cursor="hi">
+            <span class="footer-link-icon icon-mail" aria-hidden="true"></span>
+            <span>Email</span>
+          </a>
+          <div class="wechat-contact">
+            <button class="wechat-trigger" type="button" data-cursor="qr" aria-label="Show WeChat QR code">
+              <span class="footer-link-icon icon-wechat" aria-hidden="true"></span>
+              <span>WeChat</span>
+            </button>
+            <div class="wechat-popover" aria-hidden="true">
+              <img class="wechat-qr" src="assets/wechat-qr.jpg" alt="WeChat QR code" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <p class="copyright">(c) 2026 Duoasa - UI/UX Designer</p>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js?v=20260530-hobby-masonry-real-images"></script>
+</body>
+</html>
