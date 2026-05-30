@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "young-haze-8e74",
+  "name": "duoasa-design",
   "compatibility_date": "2026-05-30",
   "assets": {
     "directory": "."
