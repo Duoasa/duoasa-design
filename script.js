@@ -9,7 +9,7 @@ const cursor = document.getElementById("cursor");
 const cursorLabelText = document.getElementById("cursorLabelText");
 const heroEmailBtn = document.querySelector(".email-pill");
 const heroOrbBackground = document.querySelector(".hero-orb-background");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = false;
 
 let isDark = html.getAttribute("data-theme") === "dark";
 
@@ -782,7 +782,7 @@ function revealFallback() {
 }
 
 function initAnimations() {
-  if (!document.querySelector(".hero") || !window.gsap || reduceMotion) {
+  if (!document.querySelector(".hero") || !window.gsap || !window.ScrollTrigger) {
     preloader.style.display = "none";
     revealFallback();
     return;

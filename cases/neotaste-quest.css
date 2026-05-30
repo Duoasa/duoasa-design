@@ -3591,7 +3591,7 @@ nav.scrolled {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: auto;
   }

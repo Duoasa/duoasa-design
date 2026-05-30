@@ -6,7 +6,7 @@ const questThemeLabel = document.getElementById("themeLabel");
 const questPreloader = document.getElementById("questPreloader");
 const questCursor = document.getElementById("cursor");
 const questCursorLabel = document.getElementById("cursorLabelText");
-const questReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const questReduceMotion = false;
 
 let questDark = questHtml.getAttribute("data-theme") === "dark";
 
@@ -451,7 +451,7 @@ function revealQuestFallback() {
 }
 
 function initQuestAnimations() {
-  if (!window.gsap || !window.ScrollTrigger || questReduceMotion) {
+  if (!window.gsap || !window.ScrollTrigger) {
     initFrameSequences(false);
     questPreloader.style.display = "none";
     revealQuestFallback();
@@ -542,7 +542,7 @@ function initQuestAnimations() {
 }
 
 function bootQuestAnimations() {
-  if ((window.gsap && window.ScrollTrigger) || questReduceMotion) {
+  if (window.gsap && window.ScrollTrigger) {
     initQuestAnimations();
     return;
   }

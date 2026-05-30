@@ -12,7 +12,7 @@
   <link rel="preload" as="font" type="font/otf" href="assets/fonts/new-order/fonnts.com-New_Order_Semibold.otf" crossorigin />
   <link rel="preload" as="font" type="font/otf" href="assets/fonts/new-order/fonnts.com-New_Order_Bold.otf" crossorigin />
   <link rel="stylesheet" href="assets/vendor/google-fonts/fonts.css" />
-  <link rel="stylesheet" href="quest-case-playground.css?v=20260530-no-cache-rise" />
+  <link rel="stylesheet" href="quest-case-playground.css?v=20260531-motion-fix" />
   <script>
     (function () {
       try {
@@ -289,15 +289,15 @@
     </footer>
   </main>
 
-  <script async src="assets/vendor/gsap/gsap.min.js"></script>
-  <script async src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-  <script src="quest-case-playground.js?v=20260530-rise-end32"></script>
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="quest-case-playground.js?v=20260531-motion-fix"></script>
   <script>
     window.addEventListener("load", function () {
       var preview = document.querySelector("[data-glass-surface-follow]");
       if (!preview) return;
       var loadGlassSurface = function () {
-        import("./quest-glass-surface.js?v=20260530-glass-anchor-copy").catch(function (error) {
+        import("./quest-glass-surface.js?v=20260531-motion-fix").catch(function (error) {
           preview.dataset.glassSurfaceStatus = "failed";
           console.warn("Glass Surface preview failed to load.", error);
         });

@@ -145,7 +145,7 @@ function initGlassSurfaceFollow(layer) {
     backgroundOpacity: 0,
   });
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduceMotion = false;
   const getAnchorPosition = () => {
     const rect = host.getBoundingClientRect();
     const anchorRect = copy?.getBoundingClientRect() || rect;
