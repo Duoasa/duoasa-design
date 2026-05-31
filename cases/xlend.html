@@ -9,7 +9,7 @@
   <link rel="preload" as="font" type="font/otf" href="../assets/fonts/new-order/fonnts.com-New_Order_Semibold.otf" crossorigin />
   <link rel="preload" as="font" type="font/otf" href="../assets/fonts/new-order/fonnts.com-New_Order_Bold.otf" crossorigin />
   <link rel="stylesheet" href="../assets/vendor/google-fonts/fonts.css" />
-  <link rel="stylesheet" href="xlend.css?v=20260531-motion-fix" />
+  <link rel="stylesheet" href="xlend.css?v=20260531-mobile-scroll-hint" />
   <script>
     (function () {
       try {
@@ -91,6 +91,22 @@
       <div class="scroll-hint quest-scroll-hint" aria-hidden="true">
         <span>Scroll</span>
         <i></i>
+      </div>
+    </section>
+
+    <section class="mobile-hero-brief" aria-label="XLend project introduction">
+      <div class="mobile-hero-brief-inner">
+        <div class="mobile-hero-title-wrap" data-reveal>
+          <p class="quest-company">XLend / Decentralized Aggregated Financing Platform</p>
+          <h1 class="mobile-hero-title">Designing XLend as an aggregated finance platform</h1>
+        </div>
+
+        <div class="mobile-hero-meta" data-reveal>
+          <div class="mobile-hero-meta-item"><span>Company</span><strong>Extra Labs</strong></div>
+          <div class="mobile-hero-meta-item"><span>Year</span><strong>2024/06 - Present</strong></div>
+          <div class="mobile-hero-meta-item"><span>Type</span><strong>Finance · Aggregated Financing Platform</strong></div>
+          <div class="mobile-hero-meta-item"><span>Role</span><strong>Design Lead</strong></div>
+        </div>
       </div>
     </section>
 
@@ -242,8 +258,8 @@
           </div>
 
           <div class="highlight-ui-half" aria-label="XLend account status banner applied inside the product interface">
-            <img class="highlight-ui-image highlight-ui-image-dark" src="../assets/cases/xlend/images/ui-half-black.jpg?v=20260530-ui-half-theme" alt="Dark XLend product interface with account status banner" loading="lazy" />
-            <img class="highlight-ui-image highlight-ui-image-light" src="../assets/cases/xlend/images/ui-half-white.jpg?v=20260530-ui-half-theme" alt="Light XLend product interface with account status banner" loading="lazy" />
+            <img class="highlight-ui-image highlight-ui-image-dark" src="../assets/cases/xlend/images/ui-half-black-top-rounded.png?v=20260531-top-rounded" alt="Dark XLend product interface with account status banner" loading="lazy" />
+            <img class="highlight-ui-image highlight-ui-image-light" src="../assets/cases/xlend/images/ui-half-white-top-rounded.png?v=20260531-top-rounded" alt="Light XLend product interface with account status banner" loading="lazy" />
           </div>
         </div>
       </div>
@@ -294,8 +310,15 @@
     window.addEventListener("load", function () {
       var preview = document.querySelector("[data-glass-surface-follow]");
       if (!preview) return;
+      var ua = navigator.userAgent;
+      var isSafari = /^((?!chrome|chromium|android|crios|fxios|edg|opr).)*safari/i.test(ua);
+      if (isSafari) {
+        preview.hidden = true;
+        preview.dataset.glassSurfaceStatus = "disabled-safari";
+        return;
+      }
       var loadGlassSurface = function () {
-        import("../quest-glass-surface.js?v=20260531-motion-fix").catch(function (error) {
+        import("../quest-glass-surface.js?v=20260531-safari-glass-disable").catch(function (error) {
           preview.dataset.glassSurfaceStatus = "failed";
           console.warn("Glass Surface preview failed to load.", error);
         });

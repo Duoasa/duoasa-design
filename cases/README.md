@@ -21,6 +21,16 @@ The core principle is simple: every finished project detail page must be indepen
 
 4. Updating the playground must not affect any finished project detail page.
 
+## Local Testbed Exclusion Rule
+
+1. `neotaste-quest` is a local-only testbed. It must not be treated as a public case-study page.
+
+2. Do not add a homepage entry, public navigation entry, or internal website link to `cases/neotaste-quest.html` unless the user explicitly promotes it to a public project.
+
+3. Do not include `cases/neotaste-quest.*`, `assets/cases/neotaste-quest/`, or `assets/neotaste-quest-card.svg` in production website deployments.
+
+4. Keep the `neotaste-quest` paths listed in `.assetsignore` so Cloudflare static asset uploads exclude the testbed from the public site.
+
 ## Required File Structure
 
 1. Every finished project detail page must have its own HTML, CSS, and JavaScript files.

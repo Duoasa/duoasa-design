@@ -5,3 +5,8 @@
 .assetsignore
 wrangler.jsonc
 duoasa-design-pages.zip
+cases/neotaste-quest.html
+cases/neotaste-quest.css
+cases/neotaste-quest.js
+assets/cases/neotaste-quest
+assets/neotaste-quest-card.svg

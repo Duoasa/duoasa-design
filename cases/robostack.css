@@ -4645,6 +4645,11 @@ nav.scrolled {
     line-height: 0.88;
   }
 
+  .case-robostack .robostack-hero-robot {
+    transform: scale(0.75);
+    transform-origin: 100% 100%;
+  }
+
   .quest-title .line > span {
     white-space: normal;
     max-width: 100%;
@@ -4850,10 +4855,8 @@ nav.scrolled {
   }
 
   .quest-nav-right {
-    position: absolute;
-    top: 18px;
-    right: 24px;
-    gap: 12px;
+    position: static;
+    gap: 34px;
   }
 
   .quest-back-link {
@@ -4861,17 +4864,15 @@ nav.scrolled {
   }
 
   .quest-page .theme-btn {
-    width: 38px;
-    height: 32px;
-    justify-content: center;
-    padding: 0;
-    border-color: rgba(240, 240, 234, 0.28);
-    background: rgba(8, 9, 9, 0.16);
-    color: #f0f0ea;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    padding: 8px 15px;
+    background: transparent;
   }
 
   .quest-page .theme-btn #themeLabel {
-    display: none;
+    display: inline;
   }
 
   .quest-hero-cover {

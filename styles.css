@@ -1860,6 +1860,11 @@ nav.scrolled {
   -webkit-mask-image: url("assets/contact-wechat.svg");
 }
 
+.icon-github {
+  mask-image: url("assets/contact-github.svg");
+  -webkit-mask-image: url("assets/contact-github.svg");
+}
+
 .wechat-contact {
   position: relative;
   display: inline-flex;
@@ -4277,10 +4282,8 @@ nav.scrolled {
   }
 
   .quest-nav-right {
-    position: absolute;
-    top: 18px;
-    right: 24px;
-    gap: 12px;
+    position: static;
+    gap: 34px;
   }
 
   .quest-back-link {
@@ -4288,17 +4291,15 @@ nav.scrolled {
   }
 
   .quest-page .theme-btn {
-    width: 38px;
-    height: 32px;
-    justify-content: center;
-    padding: 0;
-    border-color: rgba(240, 240, 234, 0.28);
-    background: rgba(8, 9, 9, 0.16);
-    color: #f0f0ea;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    padding: 8px 15px;
+    background: transparent;
   }
 
   .quest-page .theme-btn #themeLabel {
-    display: none;
+    display: inline;
   }
 
   .quest-hero-cover {
