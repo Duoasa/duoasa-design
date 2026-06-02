@@ -1,5 +1,5 @@
-<p align="center">
-  <img alt="Duoasa logo" src="assets/readme/duoasa-logo.png" width="320">
+<p align="left">
+  <img alt="Duoasa logo" src="assets/readme/duoasa-logo.png" width="120">
 </p>
 
 <h1 align="center">Duoasa Design</h1>
