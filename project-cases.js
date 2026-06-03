@@ -176,7 +176,7 @@ const projectCases = [
     status: "Demo",
     statusClass: "status-demo",
     visualClass: "indigo",
-    image: "assets/cases/montecarlo/card-1600.jpg",
+    image: "assets/cases/montecarlo/card-1600.jpg?v=20260604-mc-card",
     imageAlt: "Montecarlo AI agent brand cover",
     summary: "A specialized AI agent demo created for an innovation hackathon, covering product framing, interaction prototype, UI prototype, and brand visual system.",
     tags: ["AI Agent", "Prototype"],

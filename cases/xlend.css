@@ -71,6 +71,7 @@
   --title-font: "New Order", "Syne", sans-serif;
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition: 0.42s var(--ease);
+  --nav-logo-icon-size: 36px;
 }
 
 [data-theme="light"] {
@@ -325,7 +326,7 @@ nav.scrolled {
   left: 22%;
   right: 22%;
   gap: 42px;
-  padding: 14px 34px;
+  padding: 14px;
   overflow: hidden;
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
@@ -346,10 +347,29 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: "Syne", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--fg);
+}
+
+.nav-logo-icon {
+  display: block;
+  width: var(--nav-logo-icon-size);
+  height: var(--nav-logo-icon-size);
+  flex: 0 0 var(--nav-logo-icon-size);
+  object-fit: contain;
+}
+
+.nav-logo-mark {
+  display: block;
+  width: 92px;
+  height: 12px;
+  flex: 0 0 auto;
+  background: currentColor;
+  -webkit-mask: url("../assets/duoasa-wordmark.svg?v=20260604-final") center / contain no-repeat;
+  mask: url("../assets/duoasa-wordmark.svg?v=20260604-final") center / contain no-repeat;
 }
 
 .nav-right,
@@ -4822,7 +4842,12 @@ nav.scrolled {
     top: 12px;
     left: 16px;
     right: 16px;
-    padding: 12px 20px;
+    padding: 12px;
+  }
+
+  .nav-logo-mark {
+    width: 85px;
+    height: 11px;
   }
 
   .nav-links {

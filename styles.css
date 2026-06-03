@@ -1,4 +1,5 @@
 :root {
+  --nav-logo-icon-size: 36px;
   --bg: #080909;
   --bg2: #101112;
   --fg: #f0f0ea;
@@ -259,7 +260,7 @@ nav.scrolled {
   left: 22%;
   right: 22%;
   gap: 42px;
-  padding: 14px 34px;
+  padding: 14px;
   overflow: hidden;
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
@@ -280,10 +281,29 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: "Syne", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.nav-logo-icon {
+  display: block;
+  width: var(--nav-logo-icon-size);
+  height: var(--nav-logo-icon-size);
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.nav-logo-mark {
+  display: block;
+  width: 92px;
+  height: 12px;
+  flex: 0 0 auto;
+  background: currentColor;
+  mask: url("assets/duoasa-wordmark.svg?v=20260604-final") center / contain no-repeat;
+  -webkit-mask: url("assets/duoasa-wordmark.svg?v=20260604-final") center / contain no-repeat;
 }
 
 .nav-right,
@@ -1103,7 +1123,7 @@ nav.scrolled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
   animation: expo-credit-roll 34s linear infinite;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
 }
@@ -1113,9 +1133,9 @@ nav.scrolled {
 }
 
 .expo-credit-title {
-  max-width: 520px;
+  max-width: 460px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(30px, 3.4vw, 44px);
+  font-size: clamp(24px, 2.7vw, 34px);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: 0;
@@ -1124,23 +1144,23 @@ nav.scrolled {
 
 .expo-credit-roll p:not(.expo-credit-title) {
   display: grid;
-  grid-template-columns: minmax(160px, 0.92fr) minmax(190px, 1.08fr);
-  gap: 32px;
-  width: min(640px, 100%);
-  align-items: baseline;
+  grid-template-columns: minmax(136px, 0.94fr) minmax(168px, 1.06fr);
+  gap: 18px;
+  width: min(520px, 100%);
+  align-items: center;
   text-align: left;
 }
 
 .expo-credit-roll span {
   color: rgba(245, 247, 251, 0.72);
-  font-size: clamp(11px, 1vw, 13px);
+  font-size: clamp(10px, 0.9vw, 12px);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .expo-credit-roll strong {
-  font-size: clamp(20px, 2.2vw, 30px);
+  font-size: clamp(17px, 1.8vw, 24px);
   font-weight: 500;
   line-height: 1.05;
 }
@@ -3796,11 +3816,16 @@ nav.scrolled {
     top: 12px;
     left: 16px;
     right: 16px;
-    padding: 12px 20px;
+    padding: 12px;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .nav-logo-mark {
+    width: 85px;
+    height: 11px;
   }
 
   .hero {
