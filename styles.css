@@ -1632,8 +1632,8 @@ nav.scrolled {
 .hobby-intro {
   max-width: none;
   margin: 0;
-  color: #fff;
-  font-size: clamp(18px, 1.75vw, 23px);
+  color: var(--muted);
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.62;
 }
@@ -1641,11 +1641,12 @@ nav.scrolled {
 .hobby-choice-text {
   max-width: none;
   color: #fff;
-  font-size: clamp(18px, 1.75vw, 23px);
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.62;
 }
 
+.hobby-intro strong,
 .hobby-choice-text strong {
   color: inherit;
   font-weight: 700;
@@ -1655,7 +1656,6 @@ nav.scrolled {
   color: color-mix(in srgb, var(--fg) 76%, transparent);
 }
 
-[data-theme="light"] .hobby-intro,
 [data-theme="light"] .hobby-choice-text {
   color: var(--fg);
 }
