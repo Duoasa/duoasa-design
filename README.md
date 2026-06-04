@@ -18,7 +18,7 @@
 <p align="center">
   <a href="https://design.duoasa.com">Website</a>
   &middot;
-  <a href="cases/README.md">Rules</a>
+  <a href="AGENTS.md">Agent Rules</a>
   &middot;
   <a href="#motion-and-open-source-references">Motion References</a>
   &middot;
@@ -65,17 +65,25 @@ For AI-assisted front-end work, the useful pattern is not a single prompt. The u
 
 ## Rule Documents
 
-The core maintenance rule document is:
+Rule documents are treated as part of the source code. They turn repeated design, implementation, and review decisions into durable instructions for future AI-assisted development sessions.
 
-- [Case Study Page Independence Rules](cases/README.md)
+The root workflow entry is [AGENTS.md](AGENTS.md). It works as a lightweight rule index: before making changes, Codex checks the task type and reads the matching Markdown rule file.
 
-It defines how project detail pages are created, frozen, edited, and deployed. Key principles include:
+| Document | Role | When it applies |
+| --- | --- | --- |
+| [AGENTS.md](AGENTS.md) | Agent workflow index for this repository | Before making repository changes; it decides which rule document should be read first |
+| [Case Study Page Independence Rules](cases/README.md) | Keeps second-level project pages isolated and safe to edit | Before creating, freezing, editing, or refactoring any project case study page |
+| [External Interaction Component Integration Guidelines](docs/external-interaction-component-guidelines.md) | Defines how to import, adapt, and verify external animated or interactive components | Before using WebGL, canvas, shader backgrounds, React Bits exports, scroll effects, pointer-reactive visuals, or other open-source interaction components |
 
-- every finished detail page owns its own HTML, CSS, and JavaScript files
-- page-level styles are scoped to the current page
-- project-specific assets stay inside the matching project asset folder
-- local testbeds are excluded from public deployment until explicitly promoted
-- cache-version query strings are updated when page CSS or JavaScript changes
+Current rule coverage includes:
+
+- finished detail pages own their own HTML, CSS, JavaScript, and project assets
+- page-level styles stay scoped to the current project page
+- local testbeds stay excluded from production until explicitly promoted
+- external component integrations preserve source defaults, rendering pipeline, color space, alpha blending, DPR, and post-processing before visual tuning
+- cache-version query strings are updated when changed CSS or JavaScript must be reloaded
+
+This structure is intentionally extensible: new rule files can be added under `docs/` or a feature-specific folder, then referenced from `AGENTS.md` with a clear trigger condition.
 
 ## Motion And Open-source References
 
@@ -84,8 +92,8 @@ The site combines hand-written interaction code with adapted open-source motion 
 | Layer | Use in this site | Reference |
 | --- | --- | --- |
 | Motion system | Entrance motion, scroll reveals, parallax moments, and scroll-controlled frame sequences | [GSAP](https://gsap.com/docs/v3/) + [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) |
-| Creative component references | Orb, glass, terminal, prism, and prismatic visual experiments | [React Bits](https://www.reactbits.dev/) |
-| Hero atmosphere | Adapted shader background for the homepage hero | [React Bits Orb](https://www.reactbits.dev/backgrounds/orb) |
+| Creative component references | Grid scan, glass, terminal, prism, and prismatic visual experiments | [React Bits](https://www.reactbits.dev/) |
+| Hero atmosphere | Adapted Grid Scan shader background for the homepage hero | [React Bits Grid Scan](https://www.reactbits.dev/backgrounds/grid-scan) |
 | Glass experiments | Fluid glass and SVG-filter glass surface explorations | [Fluid Glass](https://www.reactbits.dev/components/fluid-glass), [Glass Surface](https://www.reactbits.dev/components/glass-surface) |
 | WebGL components | Material rendering and 3D glass preview support | [Three.js](https://threejs.org/docs/), [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction), [Drei](https://github.com/pmndrs/drei), [maath](https://github.com/pmndrs/maath) |
 | Shader backgrounds | Terminal and prism-style lightweight WebGL effects | [OGL](https://github.com/oframe/ogl), [Faulty Terminal](https://www.reactbits.dev/backgrounds/faulty-terminal), [Prism](https://www.reactbits.dev/backgrounds/prism), [Prismatic Burst](https://www.reactbits.dev/backgrounds/prismatic-burst) |
