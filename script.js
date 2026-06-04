@@ -944,6 +944,27 @@ function initAnimations() {
 }
 
 if (heroEmailBtn) {
+  const heroEmails = (heroEmailBtn.dataset.emails || heroEmailBtn.dataset.copyEmail || "")
+    .split(",")
+    .map((email) => email.trim())
+    .filter(Boolean);
+  let heroEmailIndex = 0;
+
+  function setHeroEmail(index) {
+    if (!heroEmails.length) return;
+    heroEmailIndex = index % heroEmails.length;
+    heroEmailBtn.dataset.copyEmail = heroEmails[heroEmailIndex];
+    heroEmailBtn.classList.toggle("is-email-alt", heroEmailIndex === 1);
+  }
+
+  setHeroEmail(0);
+
+  if (heroEmails.length > 1) {
+    setInterval(() => {
+      setHeroEmail(heroEmailIndex + 1);
+    }, 5000);
+  }
+
   heroEmailBtn.addEventListener("click", () => {
     const email = heroEmailBtn.dataset.copyEmail;
     heroEmailBtn.classList.add("copied");

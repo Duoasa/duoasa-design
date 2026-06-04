@@ -12,7 +12,7 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#080909" />
   <link rel="stylesheet" href="assets/vendor/google-fonts/fonts.css" />
-  <link rel="stylesheet" href="styles.css?v=20260604-hobby-copy-bold" />
+  <link rel="stylesheet" href="styles.css?v=20260605-email-width-match" />
   <script>
     (function () {
       var saved = null;
@@ -77,10 +77,20 @@
         <div class="hero-bottom">
           <p class="hero-desc">UI/UX designer with a computer science background and 9+ years of cross-industry project experience.</p>
           <div class="hero-pills" aria-label="Profile highlights">
-            <span class="pill available"><span></span>Available for work</span>
+            <span class="pill available">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span class="availability-text">
+                <span class="availability-word availability-word-engaged">Engaged</span>
+                <span class="availability-separator" aria-hidden="true">//</span>
+                <span class="availability-word availability-word-available">Available</span>
+              </span>
+            </span>
             <span class="pill">China, Chongqing</span>
-            <button class="pill email-pill" type="button" data-copy-email="553486735@qq.com" aria-label="Copy hero email address">
-              <span>553486735@QQ.COM</span>
+            <button class="pill email-pill" type="button" data-copy-email="553486735@QQ.COM" data-emails="553486735@QQ.COM,XUCHEN1995@GMAIL.COM" aria-label="Copy hero email address">
+              <span class="email-flip-window" aria-hidden="true">
+                <span class="email-flip-item email-flip-primary">553486735@QQ.COM</span>
+                <span class="email-flip-item email-flip-secondary">XUCHEN1995@GMAIL.COM</span>
+              </span>
             </button>
           </div>
         </div>
@@ -671,6 +681,6 @@
 
   <script src="assets/vendor/gsap/gsap.min.js"></script>
   <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-  <script src="script.js?v=20260531-motion-fix"></script>
+  <script src="script.js?v=20260605-email-gmail-basis"></script>
 </body>
 </html>

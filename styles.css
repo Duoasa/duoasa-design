@@ -548,52 +548,187 @@ nav.scrolled {
 }
 
 .pill.available {
-  border-color: color-mix(in srgb, var(--success) 44%, transparent);
-  background: color-mix(in srgb, var(--success) 8%, transparent);
-  color: var(--success);
+  --availability-breath-cycle: 2s;
+  --availability-cycle: 8s;
+  --engaged-color: var(--email-accent);
+  --open-color: var(--success);
+  min-width: 182px;
+  justify-content: center;
+  border-color: color-mix(in srgb, var(--engaged-color) 52%, transparent);
+  background: color-mix(in srgb, var(--engaged-color) 9%, transparent);
+  color: var(--engaged-color);
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--engaged-color) 26%, transparent);
+  animation: availabilityGlow var(--availability-cycle) ease-in-out infinite;
 }
 
-.pill.available span {
+.availability-dot {
   width: 6px;
   height: 6px;
+  flex: 0 0 6px;
   border-radius: 999px;
   background: currentColor;
-  animation: blink 2.2s ease infinite;
+  box-shadow: 0 0 10px currentColor;
+  animation: availabilityDotPulse var(--availability-breath-cycle) ease-in-out infinite;
+}
+
+.availability-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.availability-word,
+.availability-separator {
+  transition: color 0.34s ease, opacity 0.34s ease;
+}
+
+.availability-word-engaged {
+  animation: engagedWordState var(--availability-cycle) ease-in-out infinite;
+}
+
+.availability-word-available {
+  animation: availableWordState var(--availability-cycle) ease-in-out infinite;
+}
+
+.availability-separator {
+  color: color-mix(in srgb, currentColor 66%, var(--muted));
+}
+
+@keyframes availabilityGlow {
+  0%, 47%, 100% {
+    border-color: color-mix(in srgb, var(--engaged-color) 52%, transparent);
+    background: color-mix(in srgb, var(--engaged-color) 9%, transparent);
+    color: var(--engaged-color);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--engaged-color) 26%, transparent);
+  }
+  53%, 97% {
+    border-color: color-mix(in srgb, var(--open-color) 52%, transparent);
+    background: color-mix(in srgb, var(--open-color) 9%, transparent);
+    color: var(--open-color);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--open-color) 26%, transparent);
+  }
+}
+
+@keyframes availabilityDotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    opacity: 0.42;
+    transform: scale(0.72);
+    box-shadow: 0 0 4px currentColor;
+  }
+}
+
+@keyframes engagedWordState {
+  0%, 47%, 100% {
+    color: currentColor;
+    opacity: 1;
+  }
+  53%, 97% {
+    color: var(--muted);
+    opacity: 0.58;
+  }
+}
+
+@keyframes availableWordState {
+  0%, 47%, 100% {
+    color: var(--muted);
+    opacity: 0.58;
+  }
+  53%, 97% {
+    color: currentColor;
+    opacity: 1;
+  }
 }
 
 .email-pill {
+  --email-qq-color: var(--email-accent);
+  --email-gmail-color: #ea4335;
+  --email-active-color: var(--email-qq-color);
+  --email-window-width: 154px;
+  width: max-content;
   min-width: 0;
   justify-content: center;
-  border-color: color-mix(in srgb, var(--email-accent) 44%, transparent);
-  background: color-mix(in srgb, var(--email-accent) 8%, transparent);
-  color: var(--email-accent);
-  letter-spacing: 0.04em;
+  border-color: color-mix(in srgb, var(--email-active-color) 44%, transparent);
+  background: color-mix(in srgb, var(--email-active-color) 8%, transparent);
+  color: var(--email-active-color);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   white-space: nowrap;
-  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  perspective: 420px;
+}
+
+.email-pill.is-email-alt {
+  --email-active-color: var(--email-gmail-color);
 }
 
 [data-theme="light"] .email-pill {
-  border-color: color-mix(in srgb, var(--email-accent) 38%, transparent);
-  background: color-mix(in srgb, var(--email-accent) 7%, transparent);
+  border-color: color-mix(in srgb, var(--email-active-color) 38%, transparent);
+  background: color-mix(in srgb, var(--email-active-color) 7%, transparent);
 }
 
-.email-pill span {
+.email-flip-window {
   position: relative;
+  display: block;
   z-index: 1;
+  width: var(--email-window-width);
+  height: 1em;
+  overflow: hidden;
+  perspective: 420px;
+}
+
+.email-flip-item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backface-visibility: hidden;
+  transform-origin: center;
+  transition: opacity 0.42s ease, transform 0.52s var(--ease);
+  will-change: opacity, transform;
+}
+
+.email-flip-primary {
+  opacity: 1;
+  letter-spacing: 0.168em;
+  transform: translateY(0) rotateX(0deg);
+}
+
+.email-flip-secondary {
+  opacity: 0;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  transform: translateY(58%) rotateX(88deg);
+}
+
+.email-pill.is-email-alt .email-flip-primary {
+  opacity: 0;
+  transform: translateY(-58%) rotateX(-88deg);
+}
+
+.email-pill.is-email-alt .email-flip-secondary {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
 }
 
 .email-pill:hover,
 .email-pill.copied {
-  color: color-mix(in srgb, var(--email-accent) 84%, var(--fg));
-  border-color: color-mix(in srgb, var(--email-accent) 62%, transparent);
-  background: color-mix(in srgb, var(--email-accent) 12%, transparent);
+  color: color-mix(in srgb, var(--email-active-color) 84%, var(--fg));
+  border-color: color-mix(in srgb, var(--email-active-color) 62%, transparent);
+  background: color-mix(in srgb, var(--email-active-color) 12%, transparent);
 }
 
 [data-theme="light"] .email-pill:hover,
 [data-theme="light"] .email-pill.copied {
-  color: color-mix(in srgb, var(--email-accent) 88%, var(--fg));
-  border-color: color-mix(in srgb, var(--email-accent) 54%, transparent);
+  color: color-mix(in srgb, var(--email-active-color) 88%, var(--fg));
+  border-color: color-mix(in srgb, var(--email-active-color) 54%, transparent);
 }
 
 @keyframes blink {
